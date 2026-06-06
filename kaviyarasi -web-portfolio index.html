@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chicken Woof Dog Biscuits</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+}
+
+.hero{
+    width:100%;
+    height:500px;
+    background:url('dog.jpg');
+    background-size:cover;
+    background-position:center;
+}
+
+.container{
+    width:400px;
+    margin:20px auto;
+    padding:20px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+    text-align:center;
+}
+
+input,select{
+    width:90%;
+    padding:10px;
+    margin:8px;
+}
+
+button{
+    background:green;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero"></div>
+
+<div class="container">
+
+<h2>🐶 Chicken Woof Dog Biscuits</h2>
+
+<h3>Offer Price ₹139</h3>
+
+<input type="text" id="name" placeholder="Customer Name">
+
+<input type="tel" id="phone" placeholder="Phone Number">
+
+<input type="text" id="location" placeholder="Delivery Location">
+
+<select id="quantity">
+<option>400 Grams</option>
+<option>800 Grams</option>
+<option>1 Kg</option>
+<option>2 Kg</option>
+</select>
+
+<input type="date" id="date" readonly>
+
+<br><br>
+
+<button onclick="orderNow()">Place Order</button>
+
+</div>
+
+<script>
+document.getElementById("date").value =
+new Date().toISOString().split('T')[0];
+
+function orderNow(){
+alert("Order Placed Successfully!");
+}
+</script>
+
+</body>
+</html>
